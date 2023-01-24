@@ -2,7 +2,8 @@
 
 {% block petrus%}
 <h1>Add Task</h1>
-<form action="">
+<form action="{% url 'tasks:add' %}" method="post">
+    {% csrf_token %}
     <input type="text">
     <input type="submit">
 </form>
